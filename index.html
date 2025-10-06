@@ -94,7 +94,7 @@ https://templatemo.com/tm-578-first-portfolio
 
     <main>
 
-        <section class="hero d-flex justify-content-center align-items-center" id="section_1">
+        <!-- <section class="hero d-flex justify-content-center align-items-center" id="section_1">
             <div class="container">
                 <div class="row">
 
@@ -122,7 +122,7 @@ https://templatemo.com/tm-578-first-portfolio
                     d="M0,160L24,160C48,160,96,160,144,138.7C192,117,240,75,288,64C336,53,384,75,432,106.7C480,139,528,181,576,208C624,235,672,245,720,240C768,235,816,213,864,186.7C912,160,960,128,1008,133.3C1056,139,1104,181,1152,202.7C1200,224,1248,224,1296,197.3C1344,171,1392,117,1416,90.7L1440,64L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z">
                 </path>
             </svg>
-        </section>
+        </section> -->
 
         <!-- <section style="display: flex; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
             <div style="width: 65%; border: 2px solid greenyellow; padding: 20px 10px 20px 50px">
@@ -135,28 +135,111 @@ https://templatemo.com/tm-578-first-portfolio
             </div>
         </section> -->
 
+
         <section
-            style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 40px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; background: url('images/HeaderBackgorund.png') no-repeat center center/cover; color: white; min-height: 80vh;">
+    style="
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+        flex-wrap: wrap; 
+        padding: 80px 20px 40px; 
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+        background: url('images/HeaderBackgorund.png') no-repeat center center/cover; 
+        color: white; 
+        min-height: 100vh;
+        box-sizing: border-box;
+        gap: 20px;
+    "
+    id="section_1">
 
-            <!-- Left Content -->
-            <div style="flex: 1 1 500px; padding: 20px; max-width: 600px;">
-                <h1 style="font-size: 2.5rem; margin-bottom: 15px;">Full Stack Web Developer</h1>
-                <h3 style="font-size: 1.3rem; font-weight: 400; margin-bottom: 25px;">
-                    Open to remote jobs, freelance opportunities, and contract-based collaborations.
-                </h3>
-                <button
-                    style="padding: 12px 25px; background: linear-gradient(135deg, #00c6ff, #0072ff); color: white; border: none; border-radius: 30px; font-size: 1rem; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.3s;">
-                    Contact Me
-                </button>
-            </div>
+    <!-- Left Content -->
+    <div style="
+        flex: 1 1 500px; 
+        padding: 15px; 
+        max-width: 600px; 
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 50vh;
+    ">
+        <h1 style="
+            margin-bottom: 20px; 
+            background-color: rgba(83, 93, 161, 0.9); 
+            padding: 15px 20px; 
+            border-radius: 40px; 
+            color: white; 
+            letter-spacing: 0.1px;
+            font-size: clamp(24px, 4vw, 40px);
+            box-shadow: 0 5px 25px rgba(163, 163, 163, 0.6);
+            text-align: center;
+            margin-right: 0;
+            line-height: 1.2;
+        ">
+            Full Stack Web Developer
+        </h1>
 
-            <!-- Right Image -->
-            <div style="flex: 1 1 300px; text-align: center; margin-top: 20px;">
-                <img src="images/hanzla.png" alt=""
-                    style="max-width: 75%; border-radius: 40% 60% 30% 70% / 50% 30% 70% 50%; box-shadow: 0 8px 20px rgba(0,0,0,0.4);">
-            </div>
+        <h3 style="
+            font-size: clamp(16px, 2.5vw, 30px); 
+            font-weight: 400; 
+            margin-bottom: 25px; 
+            background-color: rgba(238, 255, 250, 0.95); 
+            color: #333; 
+            padding: 15px 20px; 
+            border-radius: 40px; 
+            box-shadow: 0 4px 25px rgba(145, 145, 145, 0.6);
+            text-align: center;
+            line-height: 1.4;
+        ">
+            Open to remote jobs, freelance opportunities, and contract-based collaborations.
+        </h3>
 
-        </section>
+        <div style="text-align: left; padding-left: 10px;">
+            <button style="
+                padding: 12px 30px; 
+                background: linear-gradient(135deg, rgba(83, 93, 161, 0.9), rgba(20, 183, 137, 0.9));
+                color: white; 
+                border: none; 
+                border-radius: 30px; 
+                font-size: clamp(14px, 1.5vw, 18px); 
+                cursor: pointer; 
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+                transition: all 0.3s ease;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                margin-left: 0;
+            " 
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(0, 0, 0, 0.4)'" 
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(0, 0, 0, 0.3)'"
+            onclick="window.location.href='#section_6'">
+                Contact Me
+            </button>
+        </div>
+    </div>
+
+    <!-- Right Image -->
+    <div style="
+        flex: 1 1 300px; 
+        text-align: center; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40vh;
+        padding: 10px;
+    ">
+        <img src="images/hanzla.png" alt="Profile Image"
+            style="
+                max-width: 75%; 
+                height: auto;
+                border-radius: 40% 60% 30% 70% / 50% 30% 70% 50%; 
+                box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+                transition: all 0.5s ease;
+            "
+            onmouseover="this.style.transform='rotate(2deg) scale(1.02)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.6)'"
+            onmouseout="this.style.transform='rotate(0deg) scale(1)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.5)'">
+    </div>
+
+</section>
 
 
         <section class="clients section-padding" id="section_2">
