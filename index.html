@@ -46,8 +46,8 @@
             <a href="index.html" class="navbar-brand mx-auto mx-lg-0">hanzla</a>
 
             <div class="d-flex align-items-center d-lg-none">
-                <i class="navbar-icon bi-telephone-plus me-3"></i>
-                <a class="custom-btn btn" href="#section_5">
+                <!-- <i class="navbar-icon bi-telephone-plus me-3" ></i> -->
+                <a class="custom-btn btn" href="https://wa.me/923045296171" target="_blank" rel="noopener noreferrer">
                     +92 304 5296171
                 </a>
             </div>
@@ -75,8 +75,9 @@
                 </ul>
 
                 <div class="d-lg-flex align-items-center d-none ms-auto">
-                    <i class="navbar-icon bi-telephone-plus me-3"></i>
-                    <a class="custom-btn btn" href="#section_5">
+                    <i class="navbar-icon bi-whatsapp me-3"></i>
+                    <a class="custom-btn btn" href="https://wa.me/923045296171" target="_blank"
+                        rel="noopener noreferrer">
                         +92 304 5296171
                     </a>
                 </div>
@@ -530,7 +531,7 @@
 
                             <strong class="site-footer-title d-block mt-4 mb-3">Stay connected</strong>
 
-                            <ul class="social-icon">
+                            <!-- <ul class="social-icon">
                                 <li class="social-icon-item"><a href="https://twitter.com/minthu"
                                         class="social-icon-link bi-twitter"></a></li>
 
@@ -540,7 +541,25 @@
 
                                 <li class="social-icon-item"><a href="https://www.youtube.com/templatemo"
                                         class="social-icon-link bi-youtube"></a></li>
+                            </ul> -->
+                            <ul class="social-icon">
+                                <li class="social-icon-item">
+                                    <a href="https://www.linkedin.com/in/hanzala-tahir/"
+                                        class="social-icon-link bi-linkedin" target="_blank"
+                                        rel="noopener noreferrer"></a>
+                                </li>
+
+                                <!-- <li class="social-icon-item">
+                                    <a href="https://www.facebook.com/yourusername" class="social-icon-link bi-facebook"
+                                        target="_blank" rel="noopener noreferrer"></a>
+                                </li> -->
+
+                                <li class="social-icon-item">
+                                    <a href="https://github.com/hanzla59" class="social-icon-link bi-github"
+                                        target="_blank" rel="noopener noreferrer"></a>
+                                </li>
                             </ul>
+
 
                             <strong class="site-footer-title d-block mt-4 mb-3">Start a project</strong>
 
@@ -576,8 +595,8 @@
                     </div>
 
                     <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                        <form action="https://formspree.io/f/mdkwdvkn" method="POST"
-                            class="custom-form contact-form" role="form">
+                        <form action="https://formspree.io/f/mdkwdvkn" method="POST" class="custom-form contact-form"
+                            role="form">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="form-floating">
@@ -672,64 +691,64 @@
 
     <!-- JAVASCRIPT FILES -->
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('.contact-form');
-    const alertDiv = document.getElementById('form-alert');
-    
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const submitButton = form.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-        
-        // Show loading state
-        submitButton.textContent = 'Sending...';
-        submitButton.disabled = true;
-        
-        // Get form data
-        const formData = new FormData(form);
-        
-        // Send to Formspree
-        fetch(form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => {
-            if (response.ok) {
-                showAlert('Message sent successfully! I will get back to you soon.', 'success');
-                form.reset();
-            } else {
-                showAlert('There was a problem sending your message. Please try again.', 'error');
-            }
-        })
-        .catch(error => {
-            showAlert('There was a problem sending your message. Please try again.', 'error');
-        })
-        .finally(() => {
-            submitButton.textContent = originalText;
-            submitButton.disabled = false;
-        });
-    });
-    
-    function showAlert(message, type) {
-        alertDiv.innerHTML = `
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('.contact-form');
+            const alertDiv = document.getElementById('form-alert');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const submitButton = form.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+
+                // Show loading state
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+
+                // Get form data
+                const formData = new FormData(form);
+
+                // Send to Formspree
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            showAlert('Message sent successfully! I will get back to you soon.', 'success');
+                            form.reset();
+                        } else {
+                            showAlert('There was a problem sending your message. Please try again.', 'error');
+                        }
+                    })
+                    .catch(error => {
+                        showAlert('There was a problem sending your message. Please try again.', 'error');
+                    })
+                    .finally(() => {
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                    });
+            });
+
+            function showAlert(message, type) {
+                alertDiv.innerHTML = `
             <div class="alert alert-${type === 'success' ? 'success' : 'danger'} alert-dismissible fade show" role="alert">
                 ${message}
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
         `;
-        alertDiv.style.display = 'block';
-        
-        // Auto hide after 5 seconds
-        setTimeout(() => {
-            alertDiv.style.display = 'none';
-        }, 5000);
-    }
-});
-</script>
+                alertDiv.style.display = 'block';
+
+                // Auto hide after 5 seconds
+                setTimeout(() => {
+                    alertDiv.style.display = 'none';
+                }, 5000);
+            }
+        });
+    </script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
